@@ -1,14 +1,7 @@
-"""Zero-training baseline: find 4-digit cards with OCR alone, no card detector.
+"""
 
-Vehicles are detected with COCO YOLOv8 and tracked with SORT. EasyOCR runs
-text detection + recognition on the windshield/dashboard region of each car
-and keeps only 4-digit reads. Slower and noisier than main.py, but works on
-day one, and its hits seed autolabel.py.
+find 4-digit cards with OCR alone, no card detector.
 
-Examples:
-    python baseline.py --source samples/example_card.jpg
-    python baseline.py --source pickup_clip.mp4 --show
-    python baseline.py --source 0 --show            # webcam / USB camera
 """
 import argparse
 import time
@@ -40,7 +33,7 @@ def parse_args():
 
 
 def run_image(path, min_conf):
-    """Read every 4-digit number in a still image, no tracking."""
+    """Read every 4-digit number in a still image"""
     frame = cv2.imread(path)
     if frame is None:
         raise SystemExit(f'Could not read image: {path}')

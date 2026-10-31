@@ -1,26 +1,3 @@
-"""Draft YOLO labels for the "card" class from recorded pickup-line footage.
-
-Two label sources are combined:
-  1. OCR: EasyOCR finds 4-digit text, and the box is grown outward to the
-     bright card around it.
-  2. YOLO-World zero-shot detection with prompts like "white paper sign".
-     A YOLO-World box that contains an OCR hit replaces the grown box. If the
-     card's edge can't be found, the source column says 'ocr-guess(review)'.
-     YOLO-World boxes without an OCR hit are kept only above --world-conf.
-
-Every label is a draft. Review and fix them in Label Studio, CVAT or Roboflow
-(all import YOLO format) before training.
-
-Output layout, one folder per recording session so train.py can split by day:
-    datasets/cards/<session>/images/*.jpg
-    datasets/cards/<session>/labels/*.txt     (YOLO: 0 cx cy w h, normalised)
-    datasets/cards/<session>/unlabeled/*.jpg  (no card found: check by hand)
-    datasets/cards/<session>/autolabel.csv    (where each box came from)
-
-Examples:
-    python autolabel.py --video recordings/2026-10-27_pm.mp4 --session 2026-10-27_pm
-    python autolabel.py --images frames/ --session test --no-world
-"""
 import argparse
 import csv
 import glob

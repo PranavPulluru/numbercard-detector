@@ -1,10 +1,10 @@
-"""Score a run's CSV against the numbers that actually came through.
+"""
 
-Ground truth is a text file with one card number per line, one line per car,
-written by someone watching the clip. Matching ignores order.
+Score a run's CSV against the numbers that actually came through.
 
     python main.py --source held_out_clip.mp4 --out eval.csv
     python evaluate.py --pred eval.csv --truth held_out_truth.txt
+
 """
 import argparse
 import csv

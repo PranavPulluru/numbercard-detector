@@ -7,11 +7,11 @@ Pipeline per frame:
     per-car vote -> one CSV row per car once the number is certain
 
 Examples:
-    python main.py --source 0 --show                      # USB camera
-    python main.py --source rtsp://user:pass@cam/stream   # IP camera
+    python main.py --source 0 --show                      
+    python main.py --source rtsp://user:pass@cam/stream   
     python main.py --source held_out_clip.mp4 --out eval.csv
-    python main.py --source samples/example_card.jpg      # single image
-    python main.py --source 0 --track-cards               # camera too close to see whole cars
+    python main.py --source samples/example_card.jpg      
+    python main.py --source 0 --track-cards              
 """
 import argparse
 import time
