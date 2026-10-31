@@ -1,0 +1,46 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# --- Virtual environments / secrets ---
+.venv/
+venv/
+env/
+.env
+
+# --- Third-party code (clone separately, see README) ---
+/sort/
+
+# --- Model weights (downloaded on first run or produced by train.py) ---
+*.pt
+*.pth
+*.onnx
+*.engine
+/weights/
+!models/.gitkeep
+
+# --- Data, training runs and outputs ---
+/datasets/
+/recordings/
+/runs/
+/debug_steps/
+data/*.txt
+*.csv
+!sample*.csv
+*.log
+
+# --- Media ---
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# --- Editors / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

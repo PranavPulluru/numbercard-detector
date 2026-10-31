@@ -1,0 +1,8 @@
+# Single-class dataset for the dashboard number card.
+# train.py writes train.txt / val.txt / test.txt by recording session.
+path: ../datasets/cards
+train: train.txt
+val: val.txt
+test: test.txt
+names:
+  0: card

@@ -1,7 +1,13 @@
-ultralytics==8.0.114
-pandas==2.0.2
-opencv-python==4.7.0.72
-numpy==1.24.3
-scipy==1.10.1
-easyocr==1.7.0
-filterpy==1.4.5
+# Install the CUDA build of torch first, e.g. for an RTX 30-series card:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+ultralytics>=8.3
+easyocr>=1.7
+opencv-python>=4.8
+numpy
+pandas
+pyyaml
+# SORT tracker (cloned into ./sort from https://github.com/abewley/sort)
+filterpy>=1.4.5
+scikit-image
+matplotlib
+lap
