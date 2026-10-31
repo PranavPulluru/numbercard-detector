@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """Live pickup-line card reader.
 
 Pipeline per frame:
@@ -13,6 +14,8 @@ Examples:
     python main.py --source samples/example_card.jpg      
     python main.py --source 0 --track-cards              
 """
+=======
+>>>>>>> 19a131e4ae369f583778cf6cf60ead877916e38c
 import argparse
 import time
 
